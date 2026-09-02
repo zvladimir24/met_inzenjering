@@ -16,7 +16,17 @@ class NavBar extends StatelessWidget {
     final mobile = !Responsive.isDesktop(context);
     final locale = AppLocaleScope.localeOf(context);
     return Container(
-      color: AppColors.darkBg.withValues(alpha: 0.94),
+      decoration: BoxDecoration(
+        color: AppColors.lightSurface,
+        border: const Border(bottom: BorderSide(color: AppColors.borderLight)),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF0F172A).withValues(alpha: 0.04),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
       padding: EdgeInsets.symmetric(horizontal: Responsive.pagePadding(context), vertical: 16),
       child: Row(
         children: [
@@ -36,7 +46,7 @@ class NavBar extends StatelessWidget {
             const LanguageToggle(),
             const SizedBox(width: 4),
             IconButton(
-              icon: const Icon(Icons.menu, color: Colors.white),
+              icon: const Icon(Icons.menu, color: AppColors.textPrimary),
               onPressed: () => _openMobileMenu(context),
             ),
           ],
@@ -49,7 +59,7 @@ class NavBar extends StatelessWidget {
     final locale = AppLocaleScope.localeOf(context);
     showModalBottomSheet(
       context: context,
-      backgroundColor: AppColors.darkBg,
+      backgroundColor: AppColors.lightSurface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
@@ -62,7 +72,7 @@ class NavBar extends StatelessWidget {
               children: [
                 for (final item in navItems)
                   ListTile(
-                    title: Text(item.label.of(locale), style: AppTextStyles.labelDark(size: 16)),
+                    title: Text(item.label.of(locale), style: AppTextStyles.labelLight(size: 16)),
                     onTap: () {
                       Navigator.pop(sheetContext);
                       onNavTap(item.sectionKey);
@@ -97,9 +107,9 @@ class LanguageToggle extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(3),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.08),
+        color: AppColors.lightBg,
         borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.14)),
+        border: Border.all(color: AppColors.borderLight),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -131,8 +141,8 @@ class _LangOption extends StatelessWidget {
         ),
         child: Text(
           label,
-          style: AppTextStyles.labelDark(size: 12.5).copyWith(
-            color: selected ? Colors.white : AppColors.textOnDarkSecondary,
+          style: AppTextStyles.labelLight(size: 12.5).copyWith(
+            color: selected ? Colors.white : AppColors.textSecondary,
           ),
         ),
       ),
@@ -151,18 +161,9 @@ class _Logo extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              gradient: AppColors.accentGradient,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            alignment: Alignment.center,
-            child: const Text('M', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18)),
-          ),
+          Image.asset('assets/images/logo/met_inzenjering_icon.png', height: 32),
           const SizedBox(width: 10),
-          Text('MET INŽENJERING', style: AppTextStyles.labelDark(size: 15).copyWith(letterSpacing: 0.5)),
+          Text('MET INŽENJERING', style: AppTextStyles.labelLight(size: 15).copyWith(letterSpacing: 0.5)),
         ],
       ),
     );
@@ -179,7 +180,7 @@ class _NavLink extends StatelessWidget {
     final locale = AppLocaleScope.localeOf(context);
     return InkWell(
       onTap: onTap,
-      child: Text(item.label.of(locale), style: AppTextStyles.bodyDark(size: 14.5)),
+      child: Text(item.label.of(locale), style: AppTextStyles.bodyLight(size: 14.5)),
     );
   }
 }

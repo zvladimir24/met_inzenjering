@@ -21,10 +21,15 @@ class ProductionGallerySection extends StatelessWidget {
         tabletColumns: 2,
         mobileColumns: 1,
         children: [
-          for (final (assetPath, icon) in _galleryPhotos)
+          for (var i = 0; i < _galleryPhotos.length; i++)
             AspectRatio(
               aspectRatio: 1.1,
-              child: PlaceholderImage(icon: icon, iconSize: 40, assetPath: assetPath),
+              child: PlaceholderImage(
+                icon: _galleryPhotos[i].$2,
+                iconSize: 40,
+                assetPath: _galleryPhotos[i].$1,
+                revealDelay: Duration(milliseconds: 90 * i),
+              ),
             ),
         ],
       ),

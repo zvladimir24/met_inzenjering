@@ -5,6 +5,7 @@ import '../../theme/app_colors.dart';
 import '../../theme/app_text_styles.dart';
 import '../../utils/launch_url.dart';
 import '../common/bento_card.dart';
+import '../common/contact_form.dart';
 import '../common/responsive_grid.dart';
 import '../common/section_header.dart';
 import '../common/section_scaffold.dart';
@@ -33,6 +34,8 @@ class ContactSection extends StatelessWidget {
             mobileColumns: 1,
             children: [for (final item in contactItems) _ContactCard(item)],
           ),
+          const SizedBox(height: 24),
+          const ContactForm(),
           const SizedBox(height: 24),
           Container(
             width: double.infinity,

@@ -36,10 +36,16 @@ class MetallurgySection extends StatelessWidget {
             tabletColumns: 3,
             mobileColumns: 2,
             children: [
-              for (final (assetPath, icon) in _metallurgyPhotos)
+              for (var i = 0; i < _metallurgyPhotos.length; i++)
                 AspectRatio(
                   aspectRatio: 1,
-                  child: PlaceholderImage(icon: icon, borderRadius: 16, iconSize: 32, assetPath: assetPath),
+                  child: PlaceholderImage(
+                    icon: _metallurgyPhotos[i].$2,
+                    borderRadius: 16,
+                    iconSize: 32,
+                    assetPath: _metallurgyPhotos[i].$1,
+                    revealDelay: Duration(milliseconds: 70 * (i % 4)),
+                  ),
                 ),
             ],
           ),

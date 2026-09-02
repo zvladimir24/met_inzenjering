@@ -27,7 +27,6 @@ const List<NavItem> navItems = [
 // Shared CTA / misc copy
 const ctaGetQuote = L10nText('Get a Quote', 'Zatražite ponudu');
 const ctaExploreCapabilities = L10nText('Explore Capabilities', 'Istražite mogućnosti');
-const ctaWatchDroneVideo = L10nText('Watch Drone Video', 'Pogledajte video snimljen dronom');
 const footerCopyright = L10nText('© Met Inženjering Novi Sad · Kula, Serbia', '© Met Inženjering Novi Sad · Kula, Srbija');
 const isoCertifiedNote = L10nText(
   'ISO Certified — ISO 9001 · ISO 14001 · ISO 3834-3 | Quality Austria certified management system.',
@@ -527,8 +526,6 @@ const List<StatData> adaStats = [
   StatData(L10nText('9', '9'), L10nText('Overhead Cranes', 'Mosne dizalice'), L10nText('installed', 'instalirano')),
 ];
 
-const adaVideoUrl = 'https://shorturl.at/8eKsA';
-
 // Production showcase
 const productionShowcaseCopy = SectionCopy(
   eyebrow: L10nText('Production — Transformer tanks', 'Proizvodnja — Transformatorski kotlovi'),
@@ -572,6 +569,29 @@ const contactCopy = SectionCopy(
   ),
 );
 
+// Contact form
+const contactFormTitle = L10nText('Send us a message', 'Pošaljite nam poruku');
+const contactFormEmailLabel = L10nText('Your email', 'Vaša email adresa');
+const contactFormEmailHint = L10nText('you@example.com', 'vi@primer.com');
+const contactFormMessageLabel = L10nText('Message', 'Poruka');
+const contactFormMessageHint = L10nText(
+  'Tell us about your project...',
+  'Recite nam nešto o vašem projektu...',
+);
+const contactFormSendLabel = L10nText('Send Message', 'Pošaljite poruku');
+const contactFormEmailError = L10nText('Please enter a valid email address', 'Unesite ispravnu email adresu');
+const contactFormMessageError = L10nText('Please enter a message', 'Unesite poruku');
+const contactFormSendingLabel = L10nText('Sending...', 'Slanje...');
+const contactFormSuccessMessage = L10nText(
+  'Message sent — we will get back to you soon.',
+  'Poruka je poslata — javićemo vam se uskoro.',
+);
+const contactFormSendAnotherLabel = L10nText('Send another message', 'Pošaljite još jednu poruku');
+const contactFormErrorMessage = L10nText(
+  'Something went wrong. Please try again later.',
+  'Došlo je do greške. Pokušajte ponovo kasnije.',
+);
+
 class ContactData {
   final IconData icon;
   final String id;
@@ -597,7 +617,7 @@ const List<ContactData> contactItems = [
     Icons.mail_outline,
     'email',
     L10nText('Email', 'Email'),
-    L10nText('tamara.erakovic@metalopromet.co.rs', 'tamara.erakovic@metalopromet.co.rs'),
+    L10nText('info@metinzenjering.rs', 'info@metinzenjering.rs'), // placeholder, replace with real email
   ),
   ContactData(
     Icons.location_on_outlined,

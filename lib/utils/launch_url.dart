@@ -5,6 +5,18 @@ Future<void> launchMail(String email) async {
   await launchUrl(uri);
 }
 
+Future<void> launchMailWithBody(String to, {String? subject, String? body}) async {
+  final uri = Uri(
+    scheme: 'mailto',
+    path: to,
+    queryParameters: {
+      'subject': ?subject,
+      'body': ?body,
+    },
+  );
+  await launchUrl(uri);
+}
+
 Future<void> launchPhone(String phone) async {
   final uri = Uri(scheme: 'tel', path: phone.replaceAll(RegExp(r'[\s()-]'), ''));
   await launchUrl(uri);

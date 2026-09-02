@@ -3,10 +3,8 @@ import '../../data/company_data.dart';
 import '../../l10n/app_locale.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_styles.dart';
-import '../../utils/launch_url.dart';
 import '../../utils/responsive.dart';
 import '../common/bento_card.dart';
-import '../common/gradient_button.dart';
 import '../common/placeholder_image.dart';
 import '../common/responsive_grid.dart';
 import '../common/section_header.dart';
@@ -48,12 +46,6 @@ class AdaFacilitySection extends StatelessWidget {
         _InfoBlock(title: adaOwnershipTitle.of(locale), body: adaOwnershipBody.of(locale)),
         const SizedBox(height: 20),
         _InfoBlock(title: adaStrategicTitle.of(locale), body: adaStrategicBody.of(locale)),
-        const SizedBox(height: 28),
-        GradientButton(
-          label: ctaWatchDroneVideo.of(locale),
-          icon: Icons.play_circle_outline,
-          onPressed: () => launchExternal(adaVideoUrl),
-        ),
       ],
     );
 
