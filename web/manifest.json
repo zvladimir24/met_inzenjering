@@ -1,6 +1,6 @@
 {
-    "name": "met_inz_web_app",
-    "short_name": "met_inz_web_app",
+    "name": "Met Inženjering Novi Sad",
+    "short_name": "Met Inženjering",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
