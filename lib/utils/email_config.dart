@@ -15,5 +15,4 @@ const emailJsTemplateId = 'template_8wnrm4n';
 // the one already built and tested.
 const emailJsAutoReplyTemplateId = 'template_s618xdo';
 
-// Test recipient — swap for the company email once ready to go live.
-const contactFormRecipientEmail = 'zvladimir24@gmail.com';
+const contactFormRecipientEmail = 'office@metinzenjering.co.rs';

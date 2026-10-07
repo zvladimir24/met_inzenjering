@@ -617,7 +617,7 @@ const List<ContactData> contactItems = [
     Icons.mail_outline,
     'email',
     L10nText('Email', 'Email'),
-    L10nText('info@metinzenjering.rs', 'info@metinzenjering.rs'), // placeholder, replace with real email
+    L10nText('office@metinzenjering.co.rs', 'office@metinzenjering.co.rs'),
   ),
   ContactData(
     Icons.location_on_outlined,
