@@ -67,7 +67,6 @@ flutter:
   assets:
     - assets/images/logo/
     - assets/images/about/
-    - assets/images/partners/
     - assets/images/technical/
     - assets/images/ada/
     - assets/images/production/

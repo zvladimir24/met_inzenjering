@@ -19,7 +19,6 @@ const List<NavItem> navItems = [
   NavItem(L10nText('Capabilities', 'Mogućnosti'), 'capabilities'),
   NavItem(L10nText('Facilities', 'Pogoni'), 'facilities'),
   NavItem(L10nText('Products', 'Proizvodi'), 'products'),
-  NavItem(L10nText('Partners', 'Partneri'), 'partners'),
   NavItem(L10nText('Quality', 'Kvalitet'), 'quality'),
   NavItem(L10nText('Contact', 'Kontakt'), 'contact'),
 ];
@@ -244,60 +243,6 @@ const List<ProductData> products = [
       'Sandblasting to Sa 2.5, primer and top coating to RAL standards — complete surface protection in-house.',
       'Peskarenje do stepena Sa 2,5, osnovni i završni premaz prema RAL standardima — kompletna zaštita površina u '
           'sopstvenoj režiji.',
-    ),
-  ),
-];
-
-// Partners
-const partnersCopy = SectionCopy(
-  eyebrow: L10nText('Strategic partners & clients', 'Strateški partneri i klijenti'),
-  title: L10nText('Trusted by global\nindustrial names', 'Poverenje globalnih\nindustrijskih imena'),
-  subtitle: L10nText(
-    'Met Inženjering collaborates with globally recognized industrial companies, serving as a reliable '
-        'manufacturing and supply partner for complex projects across Europe.',
-    'Met Inženjering sarađuje sa globalno prepoznatim industrijskim kompanijama, kao pouzdan proizvodni i '
-        'snabdevački partner za kompleksne projekte širom Evrope.',
-  ),
-);
-
-class PartnerData {
-  final L10nText name;
-  final L10nText description;
-  const PartnerData(this.name, this.description);
-}
-
-const List<PartnerData> partners = [
-  PartnerData(
-    L10nText('Comel', 'Comel'),
-    L10nText(
-      'Regional transformer manufacturing and overhaul specialist, supplying electrical equipment and industrial '
-          'control solutions. Hands-on experience in transformer production and servicing makes Comel a valuable '
-          'partner for joint projects, aftermarket service, or co-production.',
-      'Regionalni specijalista za proizvodnju i remont transformatora, koji snabdeva električnom opremom i '
-          'industrijskim upravljačkim rešenjima. Praktično iskustvo u proizvodnji i servisiranju transformatora čini '
-          'Comel vrednim partnerom za zajedničke projekte, postprodajni servis ili kooperativnu proizvodnju.',
-    ),
-  ),
-  PartnerData(
-    L10nText('Parker Hannifin (Germany)', 'Parker Hannifin (Nemačka)'),
-    L10nText(
-      'Global leader in precision components and systems for aerospace, mobile, and industrial markets — '
-          'hydraulics, pneumatics, filtration, and motion control. A strong global supply chain partner with deep '
-          'engineering expertise, ideal for complex industrial projects.',
-      'Globalni lider u preciznim komponentama i sistemima za vazduhoplovno, mobilno i industrijsko tržište — '
-          'hidraulika, pneumatika, filtracija i upravljanje kretanjem. Snažan globalni partner u lancu snabdevanja '
-          'sa dubokom inženjerskom ekspertizom, idealan za kompleksne industrijske projekte.',
-    ),
-  ),
-  PartnerData(
-    L10nText('Lohr Group (France)', 'Lohr Group (Francuska)'),
-    L10nText(
-      "Designer and manufacturer of specialized transport and logistics systems with presence on multiple "
-          "continents. Lohr's expertise in heavy and oversized transport solutions is highly relevant for logistics "
-          "and special handling of transformer tanks.",
-      'Projektant i proizvođač specijalizovanih transportnih i logističkih sistema, prisutan na više kontinenata. '
-          'Lohr-ova ekspertiza u rešenjima za transport teških i vangabaritnih tereta veoma je značajna za logistiku '
-          'i posebno rukovanje transformatorskim kotlovima.',
     ),
   ),
 ];

@@ -10,7 +10,6 @@ import '../widgets/sections/facilities_section.dart';
 import '../widgets/sections/hero_section.dart';
 import '../widgets/sections/logistics_section.dart';
 import '../widgets/sections/metallurgy_section.dart';
-import '../widgets/sections/partners_section.dart';
 import '../widgets/sections/product_range_section.dart';
 import '../widgets/sections/production_gallery_section.dart';
 import '../widgets/sections/production_showcase_section.dart';
@@ -33,7 +32,6 @@ class _HomePageState extends State<HomePage> {
     'capabilities': GlobalKey(),
     'facilities': GlobalKey(),
     'products': GlobalKey(),
-    'partners': GlobalKey(),
     'quality': GlobalKey(),
     'contact': GlobalKey(),
   };
@@ -77,7 +75,6 @@ class _HomePageState extends State<HomePage> {
                   KeyedSubtree(key: _sectionKeys['capabilities'], child: const CapabilitiesSection()),
                   KeyedSubtree(key: _sectionKeys['facilities'], child: const FacilitiesSection()),
                   KeyedSubtree(key: _sectionKeys['products'], child: const ProductRangeSection()),
-                  KeyedSubtree(key: _sectionKeys['partners'], child: const PartnersSection()),
                   const TechnicalDetailsSection(),
                   KeyedSubtree(key: _sectionKeys['quality'], child: const QualityControlSection()),
                   const LogisticsSection(),
