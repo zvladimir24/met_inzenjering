@@ -492,14 +492,24 @@ const List<L10nText> logisticsPoints = [
 // Ada facility
 const adaCopy = SectionCopy(
   eyebrow: L10nText('Production facility — Ada', 'Proizvodni pogon — Ada'),
-  title: L10nText('60 km from the main\nplant in Kula', '60 km od glavnog\npogona u Kuli'),
+  title: L10nText(
+    'Industrial potential\nopening new possibilities',
+    'Industrijski potencijal\nkoji otvara nove mogućnosti',
+  ),
   subtitle: L10nText(
-    "Met Inženjering's Ada facility is a significant expansion, offering substantial capabilities for large-scale "
-        "manufacturing projects. The facility features truck-accessible entrances suitable for full trailer "
-        "movement, ensuring efficient logistics.",
-    'Pogon Met Inženjeringa u Adi predstavlja značajno proširenje, sa velikim mogućnostima za projekte proizvodnje '
-        'velikog obima. Pogon poseduje ulaze pristupačne kamionima, pogodne za kretanje punih šlepera, čime se '
-        'obezbeđuje efikasna logistika.',
+    'Space for big ideas. Capacity for big projects.\n\n'
+        'We have an industrial complex with exceptional potential for production, logistics, and warehousing '
+        'activities. Spanning 42,660 m², with as much as 15,581 m² of enclosed space, this complex represents a '
+        'significant resource for realizing demanding industrial projects and expanding business capacity.\n\n'
+        'Halls up to 15 meters high, nine cranes, and infrastructure built for heavy vehicle access provide the '
+        'capability to work with large structures, heavy equipment, and demanding industrial loads.',
+    'Prostor za velike ideje. Kapacitet za velike projekte.\n\n'
+        'Raspolažemo industrijskim kompleksom sa izuzetnim potencijalom za razvoj proizvodnih, logističkih i '
+        'skladišnih aktivnosti. Na površini od 42.660 m², sa čak 15.581 m² zatvorenog prostora, ovaj kompleks '
+        'predstavlja značajan resurs za realizaciju zahtevnih industrijskih projekata i širenje poslovnih '
+        'kapaciteta.\n\n'
+        'Hale visine do 15 metara, devet kranova i infrastruktura prilagođena pristupu teretnih vozila pružaju '
+        'mogućnosti za rad sa velikim konstrukcijama, teškom opremom i zahtevnim industrijskim teretima.',
   ),
 );
 
@@ -520,9 +530,9 @@ const adaStrategicBody = L10nText(
 );
 
 const List<StatData> adaStats = [
-  StatData(L10nText('459,188', '459.188'), L10nText('Complex Area', 'Površina kompleksa'), L10nText('ft² total', 'ukupno ft²')),
-  StatData(L10nText('167,712', '167.712'), L10nText('Production Hall', 'Proizvodna hala'), L10nText('ft² total', 'ukupno ft²')),
-  StatData(L10nText('49', '49'), L10nText('Building Height', 'Visina objekta'), L10nText('Feet max', 'maks. stopa')),
+  StatData(L10nText('459,188', '42.660'), L10nText('Complex Area', 'Površina kompleksa'), L10nText('ft² total', 'ukupno m²')),
+  StatData(L10nText('167,712', '15.581'), L10nText('Production Hall', 'Proizvodna hala'), L10nText('ft² total', 'ukupno m²')),
+  StatData(L10nText('49', '15'), L10nText('Building Height', 'Visina objekta'), L10nText('Feet max', 'maks. m')),
   StatData(L10nText('9', '9'), L10nText('Overhead Cranes', 'Mosne dizalice'), L10nText('installed', 'instalirano')),
 ];
 
@@ -602,16 +612,10 @@ class ContactData {
 
 const List<ContactData> contactItems = [
   ContactData(
-    Icons.public,
-    'website',
-    L10nText('Parent Company Website', 'Sajt matične kompanije'),
-    L10nText('www.metalopromet.rs', 'www.metalopromet.rs'),
-  ),
-  ContactData(
     Icons.call_outlined,
     'phone',
     L10nText('Phone', 'Telefon'),
-    L10nText('+381 (0)62-802-3936', '+381 (0)62-802-3936'),
+    L10nText('+381 69 800-6365', '+381 69 800-6365'),
   ),
   ContactData(
     Icons.mail_outline,

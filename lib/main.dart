@@ -21,8 +21,7 @@ class _MetInzenjeringAppState extends State<MetInzenjeringApp> {
   @override
   void initState() {
     super.initState();
-    final browserLanguage = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-    _localeController = LocaleController(browserLanguage == 'sr' ? AppLocale.sr : AppLocale.en);
+    _localeController = LocaleController(AppLocale.sr);
   }
 
   @override
